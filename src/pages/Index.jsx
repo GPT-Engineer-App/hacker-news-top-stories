@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Container, Text, VStack, HStack, Input, Button, Box, useColorMode, IconButton } from "@chakra-ui/react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { Container, Text, VStack, HStack, Input, Button, Box, useColorMode, IconButton, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 const Index = () => {
   const [stories, setStories] = useState([]);
@@ -44,12 +44,17 @@ const Index = () => {
           onClick={toggleColorMode}
         />
       </HStack>
-      <Input
-        placeholder="Filter by domain"
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        mb={4}
-      />
+      <InputGroup mb={4}>
+        <InputLeftElement pointerEvents="none">
+          <FaSearch color="gray.300" />
+        </InputLeftElement>
+        <Input
+          placeholder="Filter by domain"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          pl={10} // Add padding to the left to accommodate the search icon
+        />
+      </InputGroup>
       <VStack spacing={4} width="100%">
         {filteredStories.map((story) => (
           <Box key={story.id} p={4} borderWidth="1px" borderRadius="md" width="100%">
