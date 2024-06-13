@@ -35,7 +35,7 @@ const Index = () => {
   }, [filter, stories]);
 
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" mt="100px">
+    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" mt="100px" position="relative" width="100%" overflow="hidden">
       <HStack width="100%" justifyContent="space-between" mb={4}>
         <Text fontSize="2xl">Hacker News Top Stories</Text>
         <IconButton
@@ -44,7 +44,7 @@ const Index = () => {
           onClick={toggleColorMode}
         />
       </HStack>
-      <InputGroup mb={4}>
+      <InputGroup mb={4} width="100%">
         <InputLeftElement pointerEvents="none">
           <FaSearch color="gray.300" />
         </InputLeftElement>
