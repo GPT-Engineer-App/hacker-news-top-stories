@@ -35,7 +35,7 @@ const Index = () => {
   }, [filter, stories]);
 
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" mt="200px">
       <HStack width="100%" justifyContent="space-between" mb={4}>
         <Text fontSize="2xl">Hacker News Top Stories</Text>
         <IconButton
